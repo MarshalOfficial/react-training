@@ -22,15 +22,18 @@ class Product extends Component {
     }
 
     handleIncrement = () => {
-        console.log('increment');
+        this.setState({ count: this.state.count + 1 });
+        console.log(this.state);
     }
 
     handleDecrement = () => {
-        console.log('decrement');
+        this.setState({ count: this.state.count - 1 });
+        console.log(this.state);
     }
 
     handleDelete = () => {
         console.log('delete');
+        console.log(this.state);
     }
 }
 
