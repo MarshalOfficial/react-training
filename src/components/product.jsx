@@ -13,6 +13,7 @@ class Product extends Component {
                 <button className='m-2 btn-sm btn-success'>+</button>
                 <button className='m-2 btn-sm btn-warning'>-</button>
                 <button className='m-2 btn-sm btn-danger'>delete</button>
+                <img src="https://picsum.photos/200" style={{ borderRadius: '50%' }} alt="" />
             </>
         );
     }
