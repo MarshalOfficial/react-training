@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './product.css'
+
 
 class Product extends Component {
     count = 5;
@@ -11,22 +11,24 @@ class Product extends Component {
             <>
                 <span className='m-2 text-info'>product name</span>
                 <span className='m-2 badge bg-primary'>{this.count === 0 ? 'zero' : this.count}</span>
-                <button className='m-2 btn-sm btn-success'>+</button>
-                <button className='m-2 btn-sm btn-warning'>-</button>
-                <button className='m-2 btn-sm btn-danger'>delete</button>
-                <img src="https://picsum.photos/200" alt="" />
+                <button onClick={this.handleIncrement} className='m-2 btn-sm btn-success'>+</button>
+                <button onClick={this.handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
+                <button onClick={this.handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
             </>
         );
     }
 
-    // format() {
-    //     if (this.count === 0) {
-    //         return 'zero';
-    //     }
-    //     else {
-    //         return this.count;
-    //     }
-    // }
+    handleIncrement() {
+        console.log('increment');
+    }
+
+    handleDecrement() {
+        console.log('decrement');
+    }
+
+    handleDelete() {
+        console.log('delete');
+    }
 }
 
 export default Product;
