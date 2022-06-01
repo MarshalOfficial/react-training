@@ -18,15 +18,15 @@ class Product extends Component {
         );
     }
 
-    handleIncrement() {
+    handleIncrement = () => {
         console.log('increment');
     }
 
-    handleDecrement() {
+    handleDecrement = () => {
         console.log('decrement');
     }
 
-    handleDelete() {
+    handleDelete = () => {
         console.log('delete');
     }
 }
