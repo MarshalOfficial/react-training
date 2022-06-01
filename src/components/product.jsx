@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 
 
 class Product extends Component {
-    count = 5;
-    state = {}
+    state = {
+        count: 0,
+        productName: 'laptop'
+    }
+
     render() {
         // const list = ['item 1', 'item 2', 'item 3'];
 
         return (
             <>
-                <span className='m-2 text-info'>product name</span>
-                <span className='m-2 badge bg-primary'>{this.count === 0 ? 'zero' : this.count}</span>
+                <span className='m-2 text-info'>{this.state.productName}</span>
+                <span className='m-2 badge bg-primary'>{this.state.count === 0 ? 'zero' : this.state.count}</span>
                 <button onClick={this.handleIncrement} className='m-2 btn-sm btn-success'>+</button>
                 <button onClick={this.handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
-                <button onClick={() => { this.handleDelete(55) }} className='m-2 btn-sm btn-danger'>delete</button>
+                <button onClick={this.handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
             </>
         );
     }
@@ -26,8 +29,8 @@ class Product extends Component {
         console.log('decrement');
     }
 
-    handleDelete = (itemNumber) => {
-        console.log(itemNumber);
+    handleDelete = () => {
+        console.log('delete');
     }
 }
 
