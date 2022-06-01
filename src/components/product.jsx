@@ -13,7 +13,7 @@ class Product extends Component {
                 <span className='m-2 badge bg-primary'>{this.count === 0 ? 'zero' : this.count}</span>
                 <button onClick={this.handleIncrement} className='m-2 btn-sm btn-success'>+</button>
                 <button onClick={this.handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
-                <button onClick={this.handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
+                <button onClick={() => { this.handleDelete(55) }} className='m-2 btn-sm btn-danger'>delete</button>
             </>
         );
     }
@@ -26,8 +26,8 @@ class Product extends Component {
         console.log('decrement');
     }
 
-    handleDelete = () => {
-        console.log('delete');
+    handleDelete = (itemNumber) => {
+        console.log(itemNumber);
     }
 }
 
