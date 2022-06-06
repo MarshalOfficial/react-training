@@ -19,6 +19,9 @@ app did mount
 * after state changes these 2 methods will run: first render, then componentDidUpdate.
 * componentDidUpdate: when update occurred (state changes)
 * componentWillUnMount: when a component will remove, maybe in a list, we delete an item, that item's component will unmount
-
+---------------------
+functional component approach:
+* use useEffect method: will run on mount, update, also can filter to run on specific lifecycle method with second parameter(empty array in sample project)
+* to cath unmount: use useEffect via a function that is returning a function, and second parameter is empty array
 
 
