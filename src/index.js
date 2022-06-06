@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 //import Products from './components/products';
 //import Products from './components/functional/products';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import App from './app';
-import App from './components/functional/app';
+import App from './app';
+//import App from './components/functional/app';
 
 ReactDOM.render(<App />, document.getElementById('root')); 
