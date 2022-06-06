@@ -15,3 +15,10 @@ product render
 nav did mount
 product did mount (3)
 app did mount
+
+* after state changes these 2 methods will run: first render, then componentDidUpdate.
+* componentDidUpdate: when update occurred (state changes)
+* componentWillUnMount: when a component will remove, maybe in a list, we delete an item, that item's component will unmount
+
+
+
