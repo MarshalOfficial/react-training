@@ -10,8 +10,9 @@ const Products = () => {
 
     return (
         <>
+            <button onClick={handleReset} className='btn btn-primary'>Reset</button>
             {products.map((p, index) => (
-                <Product onDelete={handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} />
+                <Product onIncrement={handleIncrement} onDecrement={handleDecrement} onDelete={handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} />
             )
             )}
         </>
@@ -19,6 +20,27 @@ const Products = () => {
 
     function handleDelete(productId) {
         const newProducts = products.filter(p => p.id != productId);
+        setProducts(newProducts);
+    }
+
+    function handleIncrement(productId) {
+        const newProducts = [...products];
+        const index = newProducts.findIndex(p => p.id === productId);
+        newProducts[index].count += 1;
+
+        setProducts(newProducts);
+    }
+
+    function handleDecrement(productId) {
+        const newProducts = [...products];
+        const index = newProducts.findIndex(p => p.id === productId);
+        newProducts[index].count -= 1;
+
+        setProducts(newProducts);
+    }
+
+    function handleReset() {
+        const newProducts = products.map(p => { p.count = 0; return p });
         setProducts(newProducts);
     }
 }
