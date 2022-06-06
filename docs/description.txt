@@ -1,0 +1,17 @@
+* constructor: call once, can fetch prop and init state maybe there
+* render: when render calls, it calls all childs render after render all ui section inside render method, then did mount of current component will calls
+* componentDidMount: after render, good location to fetch from api and set state
+** now:
+app ctor
+app render
+nav ctor
+nav render
+product ctor
+product render
+product ctor
+product render
+product ctor
+product render
+nav did mount
+product did mount (3)
+app did mount

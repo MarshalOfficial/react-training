@@ -4,6 +4,17 @@ import React, { Component } from 'react';
 import ProductContext from '../context/products';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    console.log('app constructor');
+  }
+
+
+  componentDidMount() {
+    console.log('app did mount');
+  }
+
   state = {
     products: [
       { id: 1, count: 2, productName: 'laptop' },
@@ -13,6 +24,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('app render');
     return (
       <>
         <ProductContext.Provider
