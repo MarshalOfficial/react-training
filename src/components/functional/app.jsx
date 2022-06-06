@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import Products from "./products";
 import ProductContext from "../../context/products";
@@ -10,6 +10,14 @@ const App = () => {
         { id: 2, count: 1, productName: 'phone' },
         { id: 3, count: 4, productName: 'airpods' }
     ]);
+
+    useEffect(() => {
+        console.log('App');
+    }, []);
+
+    useEffect(() => {
+        console.log('App2');
+    });
 
     return (
         <>
