@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import ProductContext from "../../context/products";
 
 const Product = (props) => {
+    const productContext = useContext(ProductContext);
     return (
         <div>
             <span className='m-2 text-info'>{props.productName}</span>
@@ -12,15 +14,15 @@ const Product = (props) => {
     );
 
     function handleIncrement() {
-        props.onIncrement(props.id);
+        productContext.onIncrement(props.id);
     }
 
     function handleDecrement() {
-        props.onDecrement(props.id);
+        productContext.onDecrement(props.id);
     }
 
     function handleDelete() {
-        props.onDelete(props.id);
+        productContext.onDelete(props.id);
     }
 }
 

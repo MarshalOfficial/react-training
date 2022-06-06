@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
 import Products from "./products";
+import ProductContext from "../../context/products";
 
 
 const App = () => {
@@ -12,8 +13,18 @@ const App = () => {
 
     return (
         <>
-            <Navbar products={products} />
-            <Products products={products} onIncrement={handleIncrement} onDecrement={handleDecrement} onDelete={handleDelete} onReset={handleReset} />
+            <ProductContext.Provider
+                value={{
+                    products: products,
+                    onIncrement: handleIncrement,
+                    onDecrement: handleDecrement,
+                    onDelete: handleDelete,
+                    onReset: handleReset,
+                }}
+            >
+                <Navbar />
+                <Products />
+            </ProductContext.Provider>
         </>
     );
 

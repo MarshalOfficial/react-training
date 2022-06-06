@@ -1,7 +1,7 @@
-import Navbar from './components/navbar';
-import Products from './components/products';
+import Navbar from './navbar';
+import Products from './products';
 import React, { Component } from 'react';
-import ProductContext from './context/products';
+import ProductContext from '../context/products';
 
 class App extends Component {
   state = {
