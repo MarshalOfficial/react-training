@@ -22,7 +22,7 @@ const Product = (props) => {
     }
 
     function handleDelete() {
-        console.log('delete');
+        props.onDelete(props.id);
     }
 }
 
