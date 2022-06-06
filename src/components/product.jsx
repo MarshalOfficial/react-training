@@ -8,8 +8,6 @@ class Product extends Component {
     }
 
     render() {
-        // const list = ['item 1', 'item 2', 'item 3'];
-
         return (
             <>
                 <span className='m-2 text-info'>{this.state.productName}</span>
