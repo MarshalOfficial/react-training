@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Product = (props) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(props.count);
 
     return (
         <div>
@@ -10,6 +10,7 @@ const Product = (props) => {
             <button onClick={handleIncrement} className='m-2 btn-sm btn-success'>+</button>
             <button onClick={handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
             <button onClick={handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
+            {props.children}
         </div>
     );
 
