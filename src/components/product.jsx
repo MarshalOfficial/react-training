@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Product extends Component {
     state = {
-        count: 0
+        count: this.props.count,
     }
 
     render() {
@@ -14,6 +14,7 @@ class Product extends Component {
                 <button onClick={this.handleIncrement} className='m-2 btn-sm btn-success'>+</button>
                 <button onClick={this.handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
                 <button onClick={this.handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
+                {this.props.children}
             </div>
         );
     }
