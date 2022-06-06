@@ -11,9 +11,7 @@ const Products = () => {
     return (
         <>
             {products.map((p, index) => (
-                <Product key={index} productName={p.productName} count={p.count}>
-                    <p>children prop we can pass element text and etc.</p>
-                </Product>
+                <Product key={index} productName={p.productName} count={p.count} />
             )
             )}
         </>

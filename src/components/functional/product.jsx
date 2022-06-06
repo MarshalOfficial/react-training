@@ -10,7 +10,6 @@ const Product = (props) => {
             <button onClick={handleIncrement} className='m-2 btn-sm btn-success'>+</button>
             <button onClick={handleDecrement} className='m-2 btn-sm btn-warning'>-</button>
             <button onClick={handleDelete} className='m-2 btn-sm btn-danger'>delete</button>
-            {props.children}
         </div>
     );
 
