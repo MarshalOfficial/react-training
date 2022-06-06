@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <>
         <Navbar products={this.state.products} />
-        <Products products={this.state.products} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} onDelete={this.handleDelete} />
+        <Products products={this.state.products} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} onDelete={this.handleDelete} onReset={this.handleReset} />
       </>
     );
   }

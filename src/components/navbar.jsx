@@ -6,7 +6,7 @@ class Navbar extends Component {
         return (
             <nav className='navbar navbar-light bg-light'>
                 <div className='container-fluid'>
-                    <a href='#' className='navbar-brand'>
+                    <a href='/' className='navbar-brand'>
                         Navbar {this.calculateSum()}
                     </a>
                 </div>
