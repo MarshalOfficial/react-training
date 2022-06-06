@@ -13,11 +13,16 @@ class Products extends Component {
         return (
             <>
                 {this.state.products.map((p, index) => (
-                    <Product key={index} productName={p.productName} count={p.count} />
+                    <Product onDelete={this.handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} />
                 )
                 )}
             </>
         );
+    }
+
+    handleDelete = (productId) => {
+        const newProducts = this.state.products.filter(p => p.id != productId);
+        this.setState({ products: newProducts });
     }
 }
 

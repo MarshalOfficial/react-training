@@ -29,8 +29,7 @@ class Product extends Component {
     }
 
     handleDelete = () => {
-        console.log('delete');
-        console.log(this.state);
+        this.props.onDelete(this.props.id);
     }
 }
 
